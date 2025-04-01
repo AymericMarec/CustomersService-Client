@@ -1,18 +1,23 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
+require('dotenv').config();
 
 let mainWindow;
 
 app.whenReady().then(() => {
     mainWindow = new BrowserWindow({
-        fullscreen: true,
+        width: 800,
+        height: 600,
+        // fullscreen: true,
         webPreferences: {
             contextIsolation: true, 
-            nodeIntegration: false 
+            nodeIntegration: false,
+            sandbox: false,
+            preload: path.join(__dirname, 'preload.js')
         }
     });
 
-    mainWindow.loadFile('./view/index.html');
+    mainWindow.loadFile('./view/home.html');
 
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) {
