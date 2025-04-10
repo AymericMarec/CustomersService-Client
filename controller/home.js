@@ -108,4 +108,22 @@ function confirmOrder() {
     cart = [];
     updateCartCount();
     cartModal.hide();
+    showScreensaver();
 }
+
+const screensaver = document.querySelector('.screensaver');
+
+function showScreensaver() {
+    screensaver.style.display = 'block';
+}
+
+function hideScreensaver() {
+    screensaver.style.display = 'none';
+}
+
+screensaver.addEventListener('click', function() {
+    hideScreensaver();
+});
+
+
+showScreensaver();
