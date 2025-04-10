@@ -104,7 +104,6 @@ document.querySelectorAll('.add-cart').forEach(item => {
 function confirmOrder() {
     const serveAllTogether = document.getElementById('serveAllTogether').checked;
     const tableID = window.env.TABLE_ID
-    alert(tableID);
     cart = [];
     updateCartCount();
     cartModal.hide();
