@@ -10,6 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- API Error Overlay -->
+    <div class="api-error-overlay">
+        <div class="api-error-content">
+            <div class="api-error-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h2 class="api-error-title">Erreur de Connexion</h2>
+            <p class="api-error-message">
+                Impossible de se connecter a l'api , verifiez que vous avez compléter le .env ( voir Readme ) et que vous avez lancé l'api
+            </p>
+            <button class="api-error-button" onclick="retryConnection()">
+                <i class="fas fa-redo me-2"></i>Réessayer
+            </button>
+        </div>
+    </div>
+
     <!-- Écran de veille -->
     <div class="screensaver">
         <div class="screensaver-content">
