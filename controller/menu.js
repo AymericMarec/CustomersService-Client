@@ -1,4 +1,4 @@
-export function createMenuItemHTML(item) {
+function createMenuItemHTML(item) {
     return `
         <div class="col-md-4">
             <div class="card menu-item" onclick="showItemDetails('${item.id}')">
@@ -18,7 +18,7 @@ export function createMenuItemHTML(item) {
     `;
 }
 
-export function displayMenuItems() {
+function displayMenuItems() {
     for (const category in dishes) {
         const container = document.getElementById(category);
         const items = dishes[category];
@@ -29,12 +29,11 @@ export function displayMenuItems() {
         items.forEach(item => {
             row.innerHTML += createMenuItemHTML(item);
         });
-        
         container.appendChild(row);
     }
 }
 
-export function showItemDetails(itemId) {
+function showItemDetails(itemId) {
     let selectedItem = null;
     
     for (const category in dishes) {
@@ -57,12 +56,12 @@ export function showItemDetails(itemId) {
     }
 }
 
-export function increaseQuantity() {
+function increaseQuantity() {
     const input = document.getElementById('modalItemQuantity');
     input.value = parseInt(input.value) + 1;
 }
 
-export function decreaseQuantity() {
+function decreaseQuantity() {
     const input = document.getElementById('modalItemQuantity');
     if (parseInt(input.value) > 1) {
         input.value = parseInt(input.value) - 1;

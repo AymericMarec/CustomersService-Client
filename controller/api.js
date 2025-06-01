@@ -18,8 +18,26 @@ async function GetDishes() {
             title: item.name,
             description: item.description,
             price: parseFloat(item.price),
-            image: ""
+            image: window.env.API_URL+item.picture
         });
     });
     return dishes
+}
+
+function SendOrder(){
+    fetch(window.env.API_URL+'/api/orders', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "tableNumber":window.env.TABLE_ID,
+            "order":cart
+        })
+    })
+    .then(response => {
+        if (!response.ok) {
+            return 
+        }
+    })
 }

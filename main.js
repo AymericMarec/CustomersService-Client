@@ -8,7 +8,7 @@ app.whenReady().then(() => {
     mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
-        // fullscreen: true,
+        fullscreen: true,
         webPreferences: {
             contextIsolation: true, 
             nodeIntegration: false,

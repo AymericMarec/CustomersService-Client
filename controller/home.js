@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     displayMenuItems();
     updateCartCount();
 
-    // Gestion des onglets de catégorie
     const categoryTabs = document.querySelectorAll('.category-tab');
     categoryTabs.forEach(tab => {
         tab.addEventListener('click', () => {

@@ -5,7 +5,6 @@ const itemDetailsModal = new bootstrap.Modal(document.getElementById('itemDetail
 document.getElementById('cartModal').addEventListener('show.bs.modal', showCart);
 
 
-
 function addToCart(ItemId){
     
     for (const category in dishes) {
@@ -49,11 +48,9 @@ function updateCartCount() {
 function showCart() {
     const cartItems = document.getElementById('cartItems');
     cartItems.innerHTML = '';
-    console.log(cart)
 
     cart.forEach((item, index) => {
         const itemElement = document.createElement('div');
-        console.log(item)
         itemElement.className = 'card mb-3';
         itemElement.innerHTML = `
             <div class="card-body">
@@ -81,13 +78,11 @@ function removeFromCart(index) {
 }
 
 function confirmOrder() {
-    const serveAllTogether = document.getElementById('serveAllTogether').checked;
-    const tableID = window.env.TABLE_ID
+    SendOrder()
     cart = [];
+
     updateCartCount();
     cartModal.hide();
     ShowWaitingScreen();
-    
-    // on envoie a l'api
 }
 
