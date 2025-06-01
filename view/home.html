@@ -47,19 +47,19 @@
                         <i class="fas fa-glass-martini-alt"></i>
                         <span>Apéritifs</span>
                     </button>
-                    <button class="category-tab" data-category="boissons">
+                    <button class="category-tab" data-category="Drink">
                         <i class="fas fa-wine-glass"></i>
                         <span>Boissons</span>
                     </button>
-                    <button class="category-tab" data-category="entrees">
+                    <button class="category-tab" data-category="Starter">
                         <i class="fas fa-carrot"></i>
                         <span>Entrées</span>
                     </button>
-                    <button class="category-tab" data-category="plats">
+                    <button class="category-tab" data-category="Dish">
                         <i class="fas fa-utensils"></i>
                         <span>Plats</span>
                     </button>
-                    <button class="category-tab" data-category="desserts">
+                    <button class="category-tab" data-category="Dessert">
                         <i class="fas fa-ice-cream"></i>
                         <span>Desserts</span>
                     </button>
@@ -71,10 +71,10 @@
                 <div class="row g-4">
                     <!-- Les items seront générés dynamiquement par le JS -->
                     <div id="aperitifs" class="category-content active"></div>
-                    <div id="boissons" class="category-content"></div>
-                    <div id="entrees" class="category-content"></div>
-                    <div id="plats" class="category-content"></div>
-                    <div id="desserts" class="category-content"></div>
+                    <div id="Drink" class="category-content"></div>
+                    <div id="Starter" class="category-content"></div>
+                    <div id="Dish" class="category-content"></div>
+                    <div id="Dessert" class="category-content"></div>
                 </div>
             </div>
         </div>
@@ -96,6 +96,7 @@
                         <div class="col-md-6">
                             <h4 id="modalItemTitle"></h4>
                             <p id="modalItemDescription"></p>
+                            <p id="modalItemPrice" style="display: none;"></p>
                             <div class="mb-3">
                                 <label class="form-label">Quantité</label>
                                 <div class="quantity-selector">
@@ -154,5 +155,6 @@
     <script src="../controller/home.js"></script>
     <script src="../controller/cart.js"></script>
     <script src="../controller/waiting-screen.js"></script>
+    <script src="../controller/api.js"></script>
 </body>
 </html> 

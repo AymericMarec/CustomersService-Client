@@ -4,10 +4,12 @@ const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
 const itemDetailsModal = new bootstrap.Modal(document.getElementById('itemDetailsModal'));
 document.getElementById('cartModal').addEventListener('show.bs.modal', showCart);
 
+
+
 function addToCart(ItemId){
     
-    for (const category in menuItems) {
-        const item = menuItems[category].find(i => i.id == ItemId);
+    for (const category in dishes) {
+        const item = dishes[category].find(i => i.id == ItemId);
         if (item) {
             cart.push({
                 title: item.title,
@@ -85,6 +87,7 @@ function confirmOrder() {
     updateCartCount();
     cartModal.hide();
     ShowWaitingScreen();
+    
     // on envoie a l'api
 }
 
