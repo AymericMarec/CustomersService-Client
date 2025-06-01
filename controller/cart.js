@@ -11,6 +11,7 @@ function addToCart(ItemId){
         const item = dishes[category].find(i => i.id == ItemId);
         if (item) {
             cart.push({
+                id:item.id,
                 title: item.title,
                 quantity: 1,
                 comments: "",
